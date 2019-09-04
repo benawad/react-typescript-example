@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 
-type Action =
+type Actions =
   | { type: "add"; text: string }
   | {
       type: "remove";
@@ -14,7 +14,7 @@ interface Todo {
 
 type State = Todo[];
 
-const TodoReducer = (state: State, action: Action) => {
+const TodoReducer = (state: State, action: Actions) => {
   switch (action.type) {
     case "add":
       return [...state, { text: action.text, complete: false }];
