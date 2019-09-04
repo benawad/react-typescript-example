@@ -1,7 +1,5 @@
 import React, { useReducer } from "react";
 
-interface Props {}
-
 type Action =
   | { type: "add"; text: string }
   | {
@@ -27,7 +25,7 @@ const TodoReducer = (state: State, action: Action) => {
   }
 };
 
-export const ReducerExample: React.FC<Props> = () => {
+export const ReducerExample: React.FC = () => {
   const [todos, dispatch] = useReducer(TodoReducer, []);
 
   return (
